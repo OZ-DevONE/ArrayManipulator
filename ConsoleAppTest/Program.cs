@@ -61,6 +61,39 @@ namespace ConsoleAppTest
                             }
                             break;
                         }
+
+                    case 3:
+                        {
+                            if (!CheckLenghtMyArr(myArr))
+                            {
+                                Console.WriteLine("Работа с пустым массив не поддерживается.");
+                                break;
+                            }
+                            int sum = 0;
+                            for (int i = 0; i < myArr.Length; i++)
+                            {
+                                if ((myArr[i] % 2) == 0)
+                                {
+                                    sum += myArr[i];
+                                }
+                                continue;
+                            }
+                            Console.WriteLine($"Сумма всех четных чисел: {sum}");
+                            break;
+                        }
+                    case 4:
+                        {
+                            if (!CheckLenghtMyArr(myArr))
+                            {
+                                Console.WriteLine("Работа с пустым массив не поддерживается.");
+                                break;
+                            }
+                            int minNumber = myArr.Min();
+                            Console.WriteLine($"Минимальное значение: {minNumber}");
+                            int maxNumber = myArr.Max();
+                            Console.WriteLine($"Максимальное значение: {maxNumber}");
+                            break;
+                        }
                     case 5:
                         {
                             if (!CheckLenghtMyArr(myArr))
