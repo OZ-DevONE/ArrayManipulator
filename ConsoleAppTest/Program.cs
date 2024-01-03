@@ -40,9 +40,9 @@ namespace ConsoleAppTest
                                 return;
                             }
                             Console.WriteLine("Успешно добавлено, текущие значени в массие.");
-                            foreach (int i in myArr)
+                            for (int i = 0; i < myArr.Length; i++)
                             {
-                                Console.Write($"[{i}]");
+                                Console.Write($"[{myArr[i]}]");
                             }
                             break;
                         }
@@ -55,7 +55,10 @@ namespace ConsoleAppTest
                                 break;
                             }
 
-                            Console.WriteLine("Нажато 2 Массив полный");
+                            for (int i = myArr.Length - 1; i >= 0; i--)
+                            {
+                                Console.Write($"[{myArr[i]}]");
+                            }
                             break;
                         }
                     case 5:
